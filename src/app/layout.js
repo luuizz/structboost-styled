@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import GlobalStyle from "@/styles/Global";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import PreloadProvider from "./context/PreloadContext";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -29,13 +30,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={`${inter.variable} ${sora.variable}`}>
-        <StyledComponentsRegistry>
-          <GlobalStyle />
-            <Header />
-            {children}
-            <Footer />
-        </StyledComponentsRegistry>
-        <SpeedInsights />
+        <PreloadProvider>
+          <StyledComponentsRegistry>
+            <GlobalStyle />
+              <Header />
+                {children}
+              <Footer />
+          </StyledComponentsRegistry>
+          <SpeedInsights />
+        </PreloadProvider>
         </body>
     </html>
   );
