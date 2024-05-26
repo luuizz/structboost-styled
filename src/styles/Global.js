@@ -47,6 +47,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: var(--gray-900);
         color: var(--gray-100);
+        cursor: wait;
+        overflow: hidden;
         &::-webkit-scrollbar {
             width: .5rem;
             height: .5rem;
