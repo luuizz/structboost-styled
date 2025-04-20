@@ -1,9 +1,11 @@
+import { StyledGeneric } from "@/styles/Generic";
+
 export default function Diferenciais() {
     return (
-        <div className="generic">
+        <StyledGeneric className="generic">
             <div className="container">
                 <h1>Diferenciais</h1>
             </div>
-        </div>
+        </StyledGeneric>
     )
 }

@@ -2,12 +2,11 @@
 const nextConfig = {
     compiler: {
         styledComponents: {
-          minify: true,
           ssr: true,
-          displayName: false,
-          fileName: false,
+          minify: true,
         },
       },
+      swcMinify: true,
 };
 
 export default nextConfig;

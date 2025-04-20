@@ -15,6 +15,7 @@ export default function HomeHeroSection() {
             </div>
 
             <Image 
+            priority
             src={illustration} 
             alt="Illustração da dashboard"
             width={0}
